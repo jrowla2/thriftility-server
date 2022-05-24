@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# OWNER="62701f307cbe66f4855b5e1a" TOKEN="c54140e3bb8299090c203d08517dc4cd" sh curl-scripts/items/show.sh
+# OWNER="62701f307cbe66f4855b5e1a" ID="628d65a7bfc92afefd9f0d65" TOKEN="7920b4886edce009a93574c70d97c753" sh curl-scripts/items/show.sh
 
 API="http://localhost:4741"
 URL_PATH="/items"

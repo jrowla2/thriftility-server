@@ -30,8 +30,8 @@ const router = express.Router()
 // CREATE
 // POST /items
 router.post('/items', requireToken, (req, res, next) => {
-  // set owner of new example to be current user
-  req.body.event.owner = req.user.id
+  // set owner of new item to be current user
+  req.body.item.owner = req.user.id
 
   Item.create(req.body.item)
     // respond to successful `create` with status 201 and JSON of new "item"

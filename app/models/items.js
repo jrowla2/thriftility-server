@@ -5,12 +5,12 @@ const itemSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  model: {
+  style: {
     type: String,
     required: true
   },
   gender: {
-    type: Date,
+    type: String,
     required: true
   },
   size: {
@@ -28,9 +28,14 @@ const itemSchema = new mongoose.Schema({
   priceValued: {
     type: String,
     required: true
+  },
+  owner: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User',
+    required: true
   }
 }, {
   timestamps: true
 })
 
-module.exports = mongoose.model('Event', itemSchema)
+module.exports = mongoose.model('Item', itemSchema)
