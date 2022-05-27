@@ -4,13 +4,30 @@
 This is the frontend for our event app titled Thriftility. The app is designed as a tool to research and inventory for merchandizing of second hand clothes and goods. It will allow you to keep track of your inventory as well as to automate researching and pricing of items.
 
 ## Access Online
- To view the frontend repo, [click here]().
+ To view the frontend repo, [click here](https://github.com/jrowla2/thriftility-client).
  
  To view the deployed app, [click here]()
+
+## API End Points
+
+| Verb   | URI Pattern            | Controller#Action |
+|--------|------------------------|-------------------|
+| POST   | `/sign-up`             | `users#signup`    |
+| POST   | `/sign-in`             | `users#signin`    |
+| DELETE | `/sign-out`            | `users#signout`   |
+| PATCH  | `/change-password`     | `users#changepw`  |
+| GET    | `/items`               | `items#index`     |
+| POST   | `/items`               | `items#create`    |
+| GET    | `/items/:id`           | `items#show`      |
+| PATCH  | `/items/:id`           | `items#update`    |
+| DELETE  | `/items/:id`           | `items#delete`    |
+
+All data returned from API actions is formatted as JSON.
+
  
 ## Planning
 In the planning of this application, a ERD was needed to help visualize the project.
-![Entity Relationship Diagram]()
+![Entity Relationship Diagram](https://media.git.generalassemb.ly/user/41818/files/c6926b9b-faef-4999-9f17-3df788a8a856)
 
 - As a user, I want to sign up, sign in.
 - As a user, I want to change password.
@@ -19,8 +36,8 @@ In the planning of this application, a ERD was needed to help visualize the proj
 - As a user, I want to update an item.
 - As a user, I want to delete an item.
 - As a user, I want to see all my items.
-- As a user, I want my items sorted in some informative way.
-- As a user, I want to search using data inputs for both google brand domain and google ebay listings.
+- As a user, I want my items sorted in some informative way. (v2)
+- As a user, I want to search using data inputs for both google brand domain and google ebay listings. (v2)
 
 ## Using Locally & Making Contributions
 
@@ -37,17 +54,4 @@ In the planning of this application, a ERD was needed to help visualize the proj
 - JavaScript
 - Express
 - MongoDB
-
-## Unsolved Problems for Future Iterations
-* Date will be based off user timezone instead of UTC
-* Allow users to cancel their RSVP status
-* Allow users to share an event
-* Allow users to send out messages to all RSVP'd users
-* Allow users to invite other users to events
-* Allow users to upload an image when creating an event
-* Allow users to search for events based on location/ dates
-* Allow users to see who has rsvp’d to an event
-* Allow users to create a public or private event
-* Allow users to add comments to events
-* Allow users to send a message to the event host (owner)
   
